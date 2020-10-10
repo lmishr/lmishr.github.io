@@ -1,1 +1,49 @@
-Hello World
+<html>
+	<head>
+  <style>
+    p, button {font-size: 1em}
+
+    body{background-image: url('https://gsg-61ea.kxcdn.com/media/university/600011_0_s1.jpg'); background-size: 1100px 900px;
+      background-repeat: no-repeat;}
+
+    h1{background-color: white; width:500; opacity:0.8; color: maroon;}
+    p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
+    .container {
+      position: relative;
+      width: 100%;      
+    }
+    .image {
+      opacity: 1;
+      border: solid black;
+      display: block;
+      width: 90%;
+      height: 50%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+    }
+    .container:hover .image {
+      opacity: 0.7;
+    }
+    .container:hover .middle {
+      opacity: 1;
+    }
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      border: solid black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    }
+    .text {
+      background-color: white;
+      color: black;
+      font-size: 13px;
+      padding: 10px 10px;
+    }
+  </style>
+    <title>dashboard</title>
+</head>
+</html>
