@@ -3,26 +3,27 @@
   <style>
     p, button {font-size: 1em}
 
-    body{background-image: url('https://gsg-61ea.kxcdn.com/media/university/600011_0_s1.jpg'); background-size: 1100px 900px;
-      background-repeat: no-repeat;}
+    body{background-image: url('https://www.muralswallpaper.com/app/uploads/cracked-natural-marble-textures-plain.jpg'); background-size: 1100px 900px;
+      background-repeat: repeat;}
 
-    h1{background-color: white; width:500; opacity:0.8; color: maroon;}
+    h1{width:1000; opacity:1; color: black; font-family: Comic Sans MS; font-size: 20px;}
+    h2{width:1000; opacity:1; color: black; font-family: Comic Sans MS; font-size: 15px;}
     p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
     .container {
       position: relative;
-      width: 100%;      
+      text-align: center;      
     }
     .image {
       opacity: 1;
       border: solid black;
       display: block;
-      width: 90%;
-      height: 50%;
+      width: 95%;
+      height: 30%;
       transition: .5s ease;
       backface-visibility: hidden;
     }
     .container:hover .image {
-      opacity: 0.7;
+      opacity: 0.5;
     }
     .container:hover .middle {
       opacity: 1;
@@ -32,18 +33,89 @@
       opacity: 0;
       border: solid black;
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      top: 35%;
+      left: 48%;
+      transform: translate(-50%, -40%);
       -ms-transform: translate(-50%, -50%);
+      width: 80%;
     }
     .text {
       background-color: white;
       color: black;
       font-size: 13px;
-      padding: 10px 10px;
+      padding: 5px 5px;
     }
+    .text-block {
+	  position: absolute;
+	  top: 5px;
+	  left: 5px;
+	  width: 20%;
+	  height: 20%;
+	  background-color: black;
+	  color: white;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+
   </style>
     <title>dashboard</title>
 </head>
+
+
+<img src="profilepic.png" class = "image" width = 50 style="width:220px;"> 
+	<h1> Lisa Mishra </h1> <h2> Electrical and Computer Engineering Junior at Carnegie Mellon </h2>
+	<form method="post" action="https://www.linkedin.com/in/lisa-mishra-4b828b189/">
+		<button type="choose"><b>LinkedIn</b></button> 
+	</form>
+
+	
+
+<div><b> </b><br>
+      <table>
+        <tr>
+            <div class = "container">
+            	<h4>My projects</h4>
+              	<img src="https://wallpaperaccess.com/full/1200238.png" class = "image">
+                <div class="middle">
+                <div class="text">
+                    <br> 
+                    <div> <b>3-D Video Game (March - April 2019): </b> Written in Python and utilizes Blender and the Panda3D module. Programmed a 3-dimensional video game that has a rocket (controlled by arrow keys) that can shoot at obstacles and collect power-ups. Implements artificial intelligence, 3D graphics, collision detection, randomly generated maps, reading files, increasing level difficulty, and memory storage and access</div>
+                    
+                </div>
+                  <div class="text">
+                    <br> 
+                    <div> <b>Malloc Lab (May 2020): </b>Wrote a struct-based, segregated list implementation of a dynamic memory allocator in C. Uses a first-in-first-out policy for adding free blocks to a doubly linked list, and a first-fit policy for finding available free blocks of memory. Experimented with different ways to increase memory utilization and throughput, such as removing block footers and using segregated explicit list to store free blocks </div>
+                    
+                </div>
+                <div class="text">
+                    <br> 
+                    <div> <b>Proxy Lab(April 2020): </b> Wrote HTTP web proxy in C by utilizing the socket interface. Receives connections from clients, parses request line, sends a request to a server, and reads and forwards the server response to the client. Utilizes segregated list implementation. Uses a cache to store web objects </div>
+                    
+                </div>
+            </div>
+        <tr>
+            <div class = "container">
+            	<h4>Work Experience</h4>
+            	
+              	<img src="https://wallpaperaccess.com/full/1200238.png" class = "image">
+                <div class="middle">
+                  <div class="text"> <em><b> </b></em>
+                    <br> 
+                    <div> <b>Guest Services Specialist </b> <i>at Carnegie Mellon Conference and Events Services: </i><br> 
+                    	- Provided customer service to all guests and campus partners both in-person and by phone <br>
+						- Facilitated check-in and check-out for guests<br>
+						- Served as the primary responder to guests issues and took necessary action to solve them<br>
+						- Managed and recorded financial transactions
+
+                    </div>
+                    <div> <b>Machine Learning Intern</b> <i> at Bekonix:</xsi> <br>
+                    - Focused on researching and developing Machine Learning technologies targeted for deployment in micro-controller firmware<br>- Used Arduino software to create programs to upload to micro-controllers<br>
+					- Experimented with the Bekonix app to design ways to incorporate new features involving motion recognition Created new features for the Bekonix app using robotic process automation with the UiPath platform
+                    
+                </div>
+            </div>
+
+        </tr>
+      </table>
+
 </html>
