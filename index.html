@@ -6,8 +6,8 @@
     body{background-image: url('https://www.muralswallpaper.com/app/uploads/cracked-natural-marble-textures-plain.jpg'); background-size: 1100px 900px;
       background-repeat: repeat;}
 
-    h1{width:1000; opacity:1; color: black; font-family: Apple Chancery	; font-size: 20px;}
-    h2{width:1000; opacity:1; color: black; font-family: Apple Chancery	; font-size: 15px;}
+    h1{width:1000; opacity:1; color: black; font-family: Apple Chancery	; font-size: 20px; border: solid; border-color: black; background-color: white;}
+    h2{width:1000; opacity:1; color: black; font-family: Apple Chancery; font-size: 15px;}
     p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
     .container {
       position: relative;
@@ -17,7 +17,7 @@
       opacity: 1;
       border: solid black;
       display: block;
-      width: 60%;
+      width: 70%;
       height: 20%;
       transition: .5s ease;
       backface-visibility: hidden;
@@ -35,16 +35,16 @@
       position: absolute;
       top: 35%;
       left: 20%;
-      transform: translate(-10%, -25%);
+      transform: translate(-15%, -25%);
       -ms-transform: translate(-55%, -25%);
-      width: 70%;
+      width: 80%;
+      text-align: center;
     }
     .text {
       background-color: white;
       color: black;
       font-size: 13px;
       padding: 5px 5px;
-
     }
     .text-block {
 	  position: absolute;
@@ -57,6 +57,17 @@
 	  padding-left: 10px;
 	  padding-right: 10px;
 	}
+	.bottom-left {
+	  position: absolute;
+	  bottom: 8px;
+	  left: 0px;
+	  border: solid;
+	  border-color: black;
+	  background-color: black;
+	  width: 400;
+	  text-align: center;
+	  color: white;
+	}
 
   </style>
     <title>dashboard</title>
@@ -64,24 +75,25 @@
 
 
 <img src="profilepic.png" align = "left" class = "image" style="width:300px; height: 320;"> 
-
-	<h1> Lisa Mishra </h1> <h2> Electrical and Computer Engineering Junior at Carnegie Mellon </h2>
+	<h1 style="text-align: center; border-color: white"> <em>Lisa Mishra</em> </h1> 
+	<h2>  I'm a junior in Electrical and Computer Engineering at Carnegie Mellon University. I'm interested in software engineering, machine learning, robotics and robotic process automation. </h2>
 	<form method="get" action="https://www.linkedin.com/in/lisa-mishra-4b828b189/">
 		<button type="choose">LinkedIn</button> 
 	</form>
 
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
 
 <div>
-	<h1> My Projects </h1>
-      <table>
+	<h1 align="center"> My Projects </h1>
+      <table align="center">
         <tr>
-        	<td>
+        	<td style="padding: 15px">
 	            <div class = "container">
 	              	<img src="3DGame.png"class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left">Space Raiders - 3-D Video Game </div>
 	                <div class="middle">
-	                <div class="text">
-	                    <div> <b>3-D Video Game (March - April 2019): </b> <br>
+	                <div class="text" style = "text-align: left">
+	                    <div> 
 	                    - Written in Python and utilizes Blender and the Panda3D module <br>
 	               		- A 3-dimensional video game that has a rocket (controlled by arrow keys) that can shoot at obstacles and collect power-ups. <br>
 	               		- Implements artificial intelligence, 3D graphics, collision detection, randomly generated maps, reading files, increasing level difficulty, and memory storage and access</div>
@@ -90,12 +102,17 @@
 	                </div>
 	            </div>
         	</td>
-        	<td>
+
+        	<td >
 	            <div class = "container">
 	              	<img src="https://wallpaperaccess.com/full/1200238.png" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left">Malloc Lab</div>
 	                <div class="middle">
-	                  <div class="text">
-	                    <div> <b>Malloc Lab (May 2020): </b>Wrote a struct-based, segregated list implementation of a dynamic memory allocator in C. Uses a first-in-first-out policy for adding free blocks to a doubly linked list, and a first-fit policy for finding available free blocks of memory. Experimented with different ways to increase memory utilization and throughput, such as removing block footers and using segregated explicit list to store free blocks </div>
+	                  <div class="text" style = "text-align: left">
+	                    <div> 
+	                    - A struct-based, segregated list implementation of a dynamic memory allocator in C. <br>
+	                	- Uses a first-in-first-out policy for adding free blocks to a doubly linked list, and a first-fit policy for finding available free blocks of memory. <br>
+	                	- Experimented with different ways to increase memory utilization and throughput, such as removing block footers and using segregated explicit list to store free blocks </div>
 	                    
 	                </div>
 	                </div>
@@ -104,12 +121,33 @@
     	</tr>
 
          <tr> 
-         	<td>
+         	<td style="padding: 15px">
 	            <div class = "container">
-	              	<img src="https://wallpaperaccess.com/full/1200238.png" class = "image" style = "width: 400px; height: 300px;">
+	              	<img src="proxy_thumbnail.jpg" class = "image" style = "width: 400px; height: 300px; object-fit: cover; opacity: 80%">
+	              	<div class="bottom-left">Proxy Lab</div>
 	                <div class="middle">
-	                <div class="text">                    
-	                    <div> <b>Proxy Lab(April 2020): </b> Wrote HTTP web proxy in C by utilizing the socket interface. Receives connections from clients, parses request line, sends a request to a server, and reads and forwards the server response to the client. Utilizes segregated list implementation. Uses a cache to store web objects </div>
+	                <div class="text" style = "text-align: left">                    
+	                    <div>
+	                    - An HTTP web proxy in C that utilizes the socket interface. <br>
+	                	- Receives connections from clients, parses request line, sends a request to a server, and reads and forwards the server response to the client. <br>
+	                	- Utilizes segregated list implementation. Uses a cache to store web objects </div>
+	                    
+	                </div>
+	            	</div>
+		        </div>
+		    </td>
+	     	<td>
+	            <div class = "container">
+	              	<img src="neural_network.jpg" class = "image" style = "width: 400px; height: 300px; object-fit: cover; opacity: 80%">
+	              	<div class="bottom-left">Neural Network</div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left">                    
+	                    <div>
+	                    - Implemented a single-hidden-layer neural network with a sigmoid activation function for the hidden layer, and a softmax on the output layer
+	                   	- Labels images of handwritten letters from scratch <br>
+	                   	- Takes as inputs the trainind and validation datasets, the files to write results to, the number of epochs, the number of hidden units in the hidden layer, the learning rate, and the specification for type of intialization.
+	                    
+	                	</div>
 	                    
 	                </div>
 	            	</div>
@@ -119,15 +157,16 @@
       </table>
       <br><br>
 
-      <h1>Work Experience</h1>
-      <table>
+      <h1 align="center">Work Experience</h1>
+      <table align="center">
         <tr>
         	<td>
 	            <div class = "container" style = "opacity: 0.8">
 	              	<img src="housing.jpg" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left"> <b>Guest Services Specialist </b> <i>at Carnegie Mellon Conference and Events Services </i> </div>
 	                <div class="middle">
-	                <div class="text">
-	                    <div> <b>Guest Services Specialist </b> <i>at Carnegie Mellon Conference and Events Services: </i><br> 
+	                <div class="text" style = "text-align: left">
+	                    <div>
 		            	- Provided customer service to all guests and campus partners both in-person and by phone <br>
 						- Facilitated check-in and check-out for guests<br>
 						- Served as the primary responder to guests issues and took necessary action to solve them<br>
@@ -139,9 +178,9 @@
         	<td>
 	            <div class = "container" style = "opacity: 0.8">
 	              	<img src="bekonix.png" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left"><b>Machine Learning Intern</b> <i> at Bekonix</i> </div>
 	                <div class="middle">
-	                <div class="text">
-	                    <div> <b>Machine Learning Intern</b> <i> at Bekonix</i>:</xsi> <br>
+	                <div class="text" style = "text-align: left">
             			- Focused on researching and developing Machine Learning technologies targeted for deployment in micro-controller firmware<br>
             			- Used Arduino software to create programs to upload to micro-controllers<br>
 						- Experimented with the Bekonix app to design ways to incorporate new features involving motion recognition Created new features for the Bekonix app using robotic process automation with the UiPath platform</div>
@@ -151,4 +190,5 @@
 	        </td>
     	</tr>
       </table>
+
 </html>
