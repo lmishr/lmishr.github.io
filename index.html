@@ -3,11 +3,21 @@
   <style>
     p, button {font-size: 1em;}
 
-    body{background-image: url('https://www.muralswallpaper.com/app/uploads/cracked-natural-marble-textures-plain.jpg'); background-size: 1100px 900px;
-      background-repeat: repeat;}
-
-    h1{width:1000; opacity:1; color: black; font-family: Apple Chancery	; font-size: 20px; border: solid; border-color: black; background-color: white;}
-    h2{width:1000; opacity:1; color: black; font-family: Apple Chancery; font-size: 15px;}
+    body{background-size: 1700px 3000px;
+      background-repeat: repeat; background-image: linear-gradient(to bottom, white , blue);
+  			animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; }
+    @keyframes fadeInAnimation { 
+        0% { 
+            opacity: 0; 
+        } 
+        100% { 
+            opacity: 1; 
+        } 
+    } 
+    h1{width:700; opacity:1; color: black; font-size: 30px; align-items: center;}
+    h2{width:700; opacity:1; color: black; font-family: Apple Chancery; font-size: 15px;}
     p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
     .container {
       position: relative;
@@ -21,7 +31,22 @@
       height: 20%;
       transition: .5s ease;
       backface-visibility: hidden;
+      box-shadow: -5px 1px 7px;
     }
+    .center {
+	  opacity: 1;
+      border: solid black;
+      display: block;
+      width: 70%;
+      height: 20%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top: 70px;
+	  width: 50%;
+	  box-shadow: -5px 1px 7px;
+	}
     .container:hover .image {
       opacity: 0.5;
     }
@@ -68,24 +93,34 @@
 	  text-align: center;
 	  color: white;
 	}
+	hr.solid {
+	  border-top: 3px solid;
+
+	}
 
   </style>
-    <title>dashboard</title>
+
+    <title>Lisa Mishra</title>
 </head>
 
 
-<img src="profilepic.png" align = "left" class = "image" style="width:300px; height: 320;"> 
-	<h1 style="text-align: center; border-color: white"> <em>Lisa Mishra</em> </h1> 
-	<h2>  I'm a junior in Electrical and Computer Engineering at Carnegie Mellon University. I'm interested in software engineering, machine learning, robotics and robotic process automation. </h2>
+<img src="profilepic.png" class = "center" style="width:300px; height: 320;"> 
+	<h1 align = "center" style="margin-left: auto; margin-right: auto"> LISA MISHRA</h1> 	
+	<h1 align = "center" style="margin-left: auto; margin-right: auto;font-size:18px; font-family:Courier New"> Electrical and Computer Engineering at Carnegie Mellon</h1> 
+	<h2 style="margin-left: auto; margin-right: auto; font-family:Lucida Console">  Hi! I'm a junior in Electrical and Computer Engineering at Carnegie Mellon University. I'm interested in software engineering, machine learning, robotics and robotic process automation. Scroll down to look at some of my projects and work experience! </h2>
 	<form method="get" action="https://www.linkedin.com/in/lisa-mishra-4b828b189/">
 		<button type="choose">LinkedIn</button> 
 	</form>
-
-<br><br><br><br><br><br><br><br><br><br><br>
+	<hr class="solid">
+	<hr class="solid">
+	
 
 <div>
-	<h1 align="center"> My Projects </h1>
-      <table align="center">
+    <table align="center">
+      	<th COLSPAN="2">
+	       <h3 style="font-family:Apple Chancery; font-size:25px"> My projects</h3>
+	       <hr class="solid">
+	    </th>
         <tr>
         	<td style="padding: 15px">
 	            <div class = "container">
@@ -157,8 +192,12 @@
       </table>
       <br><br>
 
-      <h1 align="center">Work Experience</h1>
+
       <table align="center">
+      	<th COLSPAN="2">
+	       <h3 style="font-family:Apple Chancery; font-size:25px">Work Experience</h3>
+	       <hr class="solid">
+	    </th>
         <tr>
         	<td>
 	            <div class = "container" style = "opacity: 0.8">
