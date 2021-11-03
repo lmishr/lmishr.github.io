@@ -1,1 +1,246 @@
-Hello World
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Roboto Condensed' rel='stylesheet'>
+ 	<style>
+  	@import "lesshat";
+    p, button {font-size: 1em;}
+
+    body{background-size: 1700px 3000px;
+      background-repeat: repeat; background-image: linear-gradient(white, lightblue);
+  			animation: fadeInAnimation ease 2s; 
+            animation-iteration-count: 1; 
+            animation-fill-mode: forwards; 
+
+		}
+
+    @keyframes fadeInAnimation { 
+        0% { 
+            opacity: 0; 
+        } 
+        100% { 
+            opacity: 1; 
+        } 
+    } 
+    h1{width:700; opacity:1; color: black; font-size: 30px; align-items: center;}
+    h2{width:700; opacity:1; color: black; font-family: Apple Chancery; font-size: 15px;}
+    p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
+    .container {
+      position: relative;
+      text-align: left;      
+    }
+    .image {
+      opacity: 1;
+      border: solid black;
+      display: block;
+      width: 70%;
+      height: 20%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+      box-shadow: -5px 1px 7px;
+    }
+    .center {
+	  opacity: 1;
+      border: solid black;
+      display: block;
+      width: 70%;
+      height: 20%;
+      transition: .5s ease;
+      backface-visibility: hidden;
+	  margin-left: auto;
+	  margin-right: auto;
+	  margin-top: 70px;
+	  width: 50%;
+	  box-shadow: -5px 1px 7px;
+	}
+    .container:hover .image {
+      opacity: 0.5;
+    }
+    .container:hover .middle {
+      opacity: 1;
+    }
+    .middle {
+      transition: .5s ease;
+      opacity: 0;
+      border: solid black;
+      position: absolute;
+      top: 35%;
+      left: 20%;
+      transform: translate(-15%, -25%);
+      -ms-transform: translate(-55%, -25%);
+      width: 80%;
+      text-align: center;
+    }
+    .text {
+      background-color: white;
+      color: black;
+      font-size: 13px;
+      padding: 5px 5px;
+    }
+    .text-block {
+	  position: absolute;
+	  top: 5px;
+	  left: 5px;
+	  width: 50%;
+	  height: 20%;
+	  background-color: black;
+	  color: white;
+	  padding-left: 10px;
+	  padding-right: 10px;
+	}
+	.bottom-left {
+	  position: absolute;
+	  bottom: 8px;
+	  left: 0px;
+	  border: solid;
+	  border-color: black;
+	  background-color: black;
+	  width: 400;
+	  text-align: center;
+	  color: white;
+	}
+	hr.solid {
+	  border-top: 3px solid;
+	}
+
+	
+	
+
+  </style>
+
+    <title>Lisa Mishra</title>
+	</head>
+
+
+<img src="profilepic.png" class = "center" style="width:300px; height: 320;"> 
+	<h1 align = "center" style="margin-left: auto; margin-right: auto"> LISA MISHRA</h1> 	
+	<h1 align = "center" style="margin-left: auto; margin-right: auto;font-size:18px; font-family:Courier New"> ELECTRICAL AND COMPUTER ENGINEERING AT CARNEGIE MELLON</h1> 
+
+	<h2 style="margin-left: auto; margin-right: auto; font-family:Lucida Console">  Hi! I'm a junior in Electrical and Computer Engineering at Carnegie Mellon University. I'm interested in software engineering, machine learning, robotics and robotic process automation. Scroll down to look at some of my projects and work experience! </h2>
+	<form method="get" action="https://www.linkedin.com/in/lisa-mishra-4b828b189/">
+		<button type="choose">LinkedIn</button> 
+	</form>
+	<hr class="solid">
+	<hr class="solid">
+	
+
+<div>
+    <table align="center" style="font-family: 'Roboto Condensed'; font-size: 20px">
+      	<th COLSPAN="2">
+	       <h3 style="font-family: 'Roboto Condensed'; font-size:25px"> &#x2699; MY PROJECTS &#x2699;
+	       </h3>
+	       <hr class="solid">
+	    </th>
+        <tr>
+        	<td>
+	            <div class = "container">
+	              	<img src="3DGame.png"class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left">Space Raiders - 3-D Video Game </div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left; font-size: 15px">
+	                    <div> 
+	                    - Written in Python, used Blender and the Panda3D module to create 3D models <br>
+	               		- A 3-dimensional video game that has a rocket (controlled by arrow keys) that can shoot at obstacles and collect power-ups. <br>
+	               		- Implements artificial intelligence, 3D graphics, collision detection, randomly generated maps, reading files, increasing level difficulty, and memory storage and access</div>
+	                </div>
+	                </div>
+	            </div>
+        	</td>
+        	<td >
+	            <div class = "container">
+	              	<img src="https://wallpaperaccess.com/full/1200238.png" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left">Dynamic Memory Allocator</div>
+	                <div class="middle">
+	                  <div class="text" style = "text-align: left; font-size: 15px">
+	                    <div> 
+	                    - A struct-based, segregated list implementation of a dynamic memory allocator in C. <br>
+	                	- Uses a first-in-first-out policy for adding free blocks to a doubly linked list, and a first-fit policy for finding available free blocks of memory. <br>
+	                	- Experimented with different ways to increase memory utilization and throughput, such as removing block footers and using segregated explicit list to store free blocks </div>
+	                    
+	                </div>
+	                </div>
+	            </div>
+	        </td>
+    	</tr>
+
+         <tr> 
+         	<td>
+	            <div class = "container">
+	              	<img src="proxy_thumbnail.jpg" class = "image" style = "width: 400px; height: 300px; object-fit: cover; opacity: 80%">
+	              	<div class="bottom-left">Proxy Lab</div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left; font-size: 15px">                    
+	                    <div>
+	                    - An HTTP web proxy in C that utilizes the socket interface. <br>
+	                	- Receives connections from clients, parses request line, sends a request to a server, and reads and forwards the server response to the client. <br>
+	                	- Utilizes segregated list implementation. Uses a cache to store web objects </div>
+	                    
+	                </div>
+	            	</div>
+		        </div>
+		    </td>
+	     	<td>
+	            <div class = "container">
+	              	<img src="neural_network.jpg" class = "image" style = "width: 400px; height: 300px; object-fit: cover; opacity: 80%">
+	              	<div class="bottom-left">Neural Network</div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left; font-size: 15px">                    
+	                    <div>
+	                    - Implemented a single-hidden-layer neural network with a sigmoid activation function for the hidden layer, and a softmax on the output layer
+	                   	- Labels images of handwritten letters from scratch <br>
+	                   	- Takes as inputs the trainind and validation datasets, the files to write results to, the number of epochs, the number of hidden units in the hidden layer, the learning rate, and the specification for type of intialization.
+	                    
+	                	</div>
+	                    
+	                </div>
+	            	</div>
+		        </div>
+		    </td>
+	    </tr>
+      </table>
+      <br><br>
+
+
+      <hr class="solid">
+      <hr class="solid">
+
+      <table align="center" style="font-family: 'Roboto Condensed'; font-size: 20px">
+      	<th COLSPAN="2">
+	       <h3 style="font-size:25px">&#x2699; WORK EXPERIENCE &#x2699;</h3>
+	       <hr class="solid">
+	    </th>
+	    <tr>
+        	<td>
+	            <div class = "container" style = "opacity: 0.8">
+	              	<img src="bekonix.png" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left"><b>Machine Learning Intern</b> <i> at Bekonix</i> </div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left; font-size: 15px">
+            			- Focused on researching and developing Machine Learning technologies targeted for deployment in micro-controller firmware<br>
+            			- Used Arduino software to create programs to upload to micro-controllers<br>
+						- Experimented with the Bekonix app to design ways to incorporate new features involving motion recognition Created new features for the Bekonix app using robotic process automation with the UiPath platform</div>
+	                </div>
+	                </div>
+	            </div>
+	        </td>
+    	</tr>
+        <tr>
+        	<td>
+	            <div class = "container" style = "opacity: 0.8">
+	              	<img src="housing.jpg" class = "image" style = "width: 400px; height: 300px;">
+	              	<div class="bottom-left"> <b>Guest Services Specialist </b> <i>at Carnegie Mellon Conference and Events Services </i> </div>
+	                <div class="middle">
+	                <div class="text" style = "text-align: left; font-size: 15px">
+	                    <div>
+		            	- Provided customer service to all guests and campus partners both in-person and by phone <br>
+						- Facilitated check-in and check-out for guests<br>
+						- Served as the primary responder to guests issues and took necessary action to solve them<br>
+						- Managed and recorded financial transactions</div>
+	                </div>
+	                </div>
+	            </div>
+	        </td>
+	    </tr>
+	    
+      </table>
+
+</html>
