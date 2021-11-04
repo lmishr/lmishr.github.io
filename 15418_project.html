@@ -21,7 +21,7 @@
             opacity: 1; 
         } 
     } 
-    h1{width:700; opacity:1; color: black; font-size: 30px; align-items: center;}
+    h1{opacity:1; color: black; font-size: 30px; align-items: center;}
     h2{width:700; opacity:1; color: black; font-family: Apple Chancery; font-size: 15px;}
     p{background-color: white; width:500; padding: 10px; border: 3px solid maroon ; margin: 5; opacity:0.8;}
     .container {
@@ -118,22 +118,42 @@
 <title>15418 Final Project</title>
 </head>
 
+
 <h1 style="font-family: 'Roboto Condensed'; font-size:25px"> 15418 Final Project - Parallelization of Inference on Recurrent Neural Networks
 
-<h3 style="font-family: 'Roboto Condensed'; font-size:15px"> &#x2699; Summary
+<br> <h1 style="font-family: 'Roboto Condensed'; font-size:15px">
+<a href="Project_Proposal_15418.pdf">PDF for Project Proposal</a>
 
-<br> <hr class="solid"> <br>
+<h3 style="font-family: 'Roboto Condensed'; font-size:20"> &#x2699; Summary </h3>
 
-<h3 style="font-family: 'Roboto Condensed'; font-size:15px"> &#x2699; Background
+	<hr class="solid"> <br>
+	Our objective is to discover and exploit opportunities for parallelism in Recurrent Neural Networks' (RNNs') inference-time forward pass computations. We aim to effectively utilize synchronization and atomic operations to mitigate the purely-sequential nature to which the data dependencies within and across neural network layers lend themselves, so that we can use parallel computation APIs (e.g. openMP) and vectorized operations on GPUs for multiprocessor speedup. 
 
-<br> <hr class="solid"> <br>
 
-<h3 style="font-family: 'Roboto Condensed'; font-size:15px"> &#x2699; The Challenge
+<h3 style="font-family: 'Roboto Condensed'; font-size:20px"> &#x2699; Background </h3>
+ <hr class="solid"> <br>
+ We are interested in finding effective ways to obtain speedup on the following basic algorithmic structure of a forward-pass computation in RNNs : <br> 
+ <h1 style="font-family: 'Courier New'; font-size:15px"> 
+ // x is a vector of inputs<br>
+    a[t] = b + W * h[t-1] + U * x[t]<br>
+    h[t] = tanh(a[t])<br>
+    o[t] = c + V * h[t]<br>
+    y[t] = softmax(o[t])<br>
+</h1>
+where the following variables correspond to layers that are vectors of neurons, indexed by time and ordered by increasing proximity to the output layer, y: a, h, o.
+We plan to find some ways to mitigate the constraints enforced by dependent data: for example, the constraint on a[t] is the completion of the computation for the hidden layer's h's) output at time t-1. If different threads were responsible for the forward-pass computations of adjacent time steps, there would need to communication of hidden-layer values that would inhibit speedup. We elaborate more on the complications that this plan generates in the ``THE CHALLENGE" section. <br> 
 
-<br> <hr class="solid"> <br>
+The following figure demonstrates the dependencies that this psudocode's computation entails: <br>
 
-<h3 style="font-family: 'Roboto Condensed'; font-size:15px"> &#x2699; Resources
+<img src="418_proposal_pic.jpg"class = "image" style = "width: 600px; height: 300;">
 
-<br> <hr class="solid"> <br>  
+<h3 style="font-family: 'Roboto Condensed'; font-size:20px"> &#x2699; The Challenge </h3>
+<hr class="solid"> <br>
+RNNs' layers are composed neurons that have dependencies both on the outputs from ``below" layers and on outputs from previous time-steps, as illustrated in the BACKGROUND section. In the discussion from the previous section regarding forward passes for adjacent columns of neurons occurring on different processors, we alluded to the unavoidable necessity to communicate hidden-layer values. A salient topic to explore while implementing parallelization is whether this necessity is most efficiently met by using shared memory (which we will test using OpenMP), an orchestration of some form of point-to-point communication (we will test this as part of our additional goals, time permitting, with OpenMPI), and/or a tiering of caches that allows targeted memory-sharing among some processors.
+
+<h3 style="font-family: 'Roboto Condensed'; font-size:20px"> &#x2699; Resources </h3>
+<hr class="solid"> <br>  
+We will need access to a computer with a NVIDIA GPU, in order to implement GPU-based accelerations (more detail on this appears in the ``PLATFORM CHOICE" section). Additionally, we will consult online resources that have psuedocode or python code for RNN inference computations (one such resource was already consulted in our discussion and is linked in-line). Additionally, we anticipate that we will consult online resources for CUDA programming, including formal developer guides published by NVIDIA.
+
 
 </html>
